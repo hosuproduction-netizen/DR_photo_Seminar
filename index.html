@@ -357,12 +357,10 @@ function updateSlotBadges(counts){
         var lbl=inp.nextElementSibling;
         if(lbl){lbl.style.opacity='.4';lbl.style.cursor='not-allowed';lbl.style.pointerEvents='none';}
       }
-    }else if(avail<=3){
-      badge.textContent=avail+'석 남음';
-      badge.className='slot-avail-badge few';
     }else{
-      badge.textContent=avail+'석 남음';
-      badge.className='slot-avail-badge ok';
+      badge.textContent='신청 즉시 확정이 아닙니다. 검토 후 개별 연락드립니다.';
+      badge.className='slot-avail-badge';
+      badge.style.color='var(--text2)';
     }
   });
 }
